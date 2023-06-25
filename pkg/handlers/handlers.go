@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"Hotel/pkg/config"
-	"Hotel/pkg/models"
-	"Hotel/pkg/render"
+	"BnBManagementSystem/pkg/config"
+	"BnBManagementSystem/pkg/models"
+	"BnBManagementSystem/pkg/render"
 	"net/http"
 )
 

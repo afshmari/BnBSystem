@@ -1,4 +1,4 @@
-module Hotel
+module BnBManagementSystem
 
 go 1.20
 

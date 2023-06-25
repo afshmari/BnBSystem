@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Hotel/pkg/config"
-	"Hotel/pkg/handlers"
+	"BnBManagementSystem/pkg/config"
+	"BnBManagementSystem/pkg/handlers"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"net/http"
