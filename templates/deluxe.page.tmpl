@@ -1,0 +1,57 @@
+
+{{template "base" .}}
+{{define "title"}}
+    about page
+{{end}}
+{{define "content"}}
+    <div class="container">
+
+        <div class="row">
+            <div class = "col-lg-12 col-md-12 col-sm-12 col-sm-12">
+                <img src="/html-source/static/images/marjors-suite.png" class="img-fluid img-thumbnail mx-auto d-block room-image" alt="room image">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center mt-4">Deluxe Suit</h1>
+                <p>Welcome to your home away from home, nestled along the breathtaking shores of the majestic Atlantic
+                    Ocean. At Chelsea Bed and Breakfast, indulge in tranquility, personalized hospitality, and unforgettable
+                    memories. Immerse yourself in the soothing sounds of crashing waves, the gentle ocean breeze, and the
+                    warm embrace of our inviting atmosphere.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+
+                <a href="/reservation-ds" class="btn btn-secondary">Check Availability</a>
+            </div>
+        </div>
+    </div>
+{{end}}
+
+{{define "js"}}
+    <script>
+        document.getElementById("check-availability-button").addEventListener("click",function (){
+
+            let html = `
+         <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
+            <div class="form-row">
+                <div class="col">
+                  <div class="form-group row" id="reservation-dates-model">
+                        <div class="col">
+                            <input disabled required class="form-control" type="text" name="start" id="start" placeholder="Check-in">
+                        </div>
+                        <div class="col">
+                            <input disabled required class="form-control" type="text" name="end" id="end" placeholder="Check-out">
+                        </div>
+                  </div>
+                </div>
+            </div>
+         </form>
+         `
+            attention.custom({msg: html, title:"Choose your dates"})
+
+        })
+
+    </script>
+{{end}}

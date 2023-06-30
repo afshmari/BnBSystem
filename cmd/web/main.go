@@ -1,9 +1,9 @@
 package main
 
 import (
-	"BnBManagementSystem/pkg/config"
-	"BnBManagementSystem/pkg/handlers"
-	"BnBManagementSystem/pkg/render"
+	"BnBManagementSystem/internal/config"
+	"BnBManagementSystem/internal/handlers"
+	"BnBManagementSystem/internal/render"
 	"fmt"
 	"github.com/alexedwards/scs/v2"
 	"log"

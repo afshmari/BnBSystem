@@ -1,8 +1,8 @@
 package render
 
 import (
-	"BnBManagementSystem/pkg/config"
-	"BnBManagementSystem/pkg/models"
+	"BnBManagementSystem/internal/config"
+	"BnBManagementSystem/internal/models"
 	"bytes"
 	"html/template"
 	"log"
