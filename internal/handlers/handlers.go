@@ -39,20 +39,20 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 		StringMap: stringMap,
 	})
 }
-func (m *Repository) Presidential(w http.ResponseWriter, r *http.Request) {
+func (m *Repository) Generals(w http.ResponseWriter, r *http.Request) {
 	remoteIP := r.RemoteAddr
 	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
-	render.RenderTemplate(w, "presidential.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, "generals.page.tmpl", &models.TemplateData{})
 }
-func (m *Repository) Deluxe(w http.ResponseWriter, r *http.Request) {
+func (m *Repository) Majors(w http.ResponseWriter, r *http.Request) {
 	remoteIP := r.RemoteAddr
 	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
-	render.RenderTemplate(w, "deluxe.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, "majors.page.tmpl", &models.TemplateData{})
 }
 func (m *Repository) Availability(w http.ResponseWriter, r *http.Request) {
 	remoteIP := r.RemoteAddr
 	m.App.Session.Put(r.Context(), "remote_ip", remoteIP)
-	render.RenderTemplate(w, "searchAvailability.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, "search-availability.page.tmpl", &models.TemplateData{})
 }
 func (m *Repository) Contact(w http.ResponseWriter, r *http.Request) {
 	remoteIP := r.RemoteAddr
