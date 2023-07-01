@@ -3,7 +3,9 @@ package main
 import (
 	"BnBManagementSystem/internal/config"
 	"BnBManagementSystem/internal/handlers"
+	"BnBManagementSystem/internal/models"
 	"BnBManagementSystem/internal/render"
+	"encoding/gob"
 	"fmt"
 	"github.com/alexedwards/scs/v2"
 	"log"
@@ -17,6 +19,8 @@ var app config.AppConfig
 var session *scs.SessionManager
 
 func main() {
+
+	gob.Register(models.Reservation{})
 
 	app.InProduction = false
 	session = scs.New()
@@ -46,4 +50,7 @@ func main() {
 	}
 	err = srv.ListenAndServe()
 	log.Fatal(err)
+}
+func run() error {
+	return nil
 }
